@@ -1,6 +1,6 @@
 const About = () => {
     return(
-        <h1></h1>
+        <h1>A Propos</h1>
     )
 }
 

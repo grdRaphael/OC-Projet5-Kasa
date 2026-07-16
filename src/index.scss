@@ -1,7 +1,9 @@
+
+
+
 $primary-color:#FF6060;
 $background-color: #FFFFFF;
 $text-color:#000000;
-$font-family:Montserrat;
 $border-radius:10px;
 $border-radius--xs:5px;
 
@@ -16,6 +18,12 @@ body{
     flex-direction: column;
     gap: 50px;
     background-color: $background-color;
-    font-family: $font-family;
+    font-family:  'Montserrat', sans-serif;
     color: $text-color;
+    padding: 45px 100px 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
 }
