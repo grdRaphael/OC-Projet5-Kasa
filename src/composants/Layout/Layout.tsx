@@ -2,9 +2,11 @@ import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import { Outlet } from "react-router-dom"
 
+import "./Layout.scss"
+
 const Layout = () => {
     return (
-        <div>
+        <div className="layout">
             <Header />
             <main>
                 <Outlet />
