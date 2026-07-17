@@ -15,11 +15,13 @@ const About = () => {
             </section>
             <section className="about_list">
                 {aboutList.map(element => (
-                    <Collapse key={element.title}
-                    title={element.title}
-                    icon={vectorUp}
-                    
-                    />
+                    <Collapse
+                        key={element.title}
+                        title={element.title}
+                        icon={vectorUp}
+                    >
+                        {element.content}
+                    </Collapse>
                 ))}
             </section>
 
