@@ -4,18 +4,22 @@ import './Collapse.scss'
 type CollapseProps = {
     title: string;
     icon: string;
-    children: React.ReactNode
+    children: React.ReactNode;
+    isOpen: boolean;
+    onToggle : () => void
 }
 
-const Collapse = ({ title, icon, children }: CollapseProps) => {
+const Collapse = ({ title, icon, children, isOpen, onToggle }: CollapseProps) => {
 
     return (
         <div className='collapse_wrapper'>
-            <div className="collapse">
+            <div className="collapse"
+                onClick={onToggle}>
                 <h3 className='collapse_title'>{title}</h3>
                 <img src={icon} alt="icon" />
             </div>
-            <CollapsePanel>{children}</CollapsePanel>
+            {isOpen && <CollapsePanel>{children}</CollapsePanel>}
+
         </div>
 
     )

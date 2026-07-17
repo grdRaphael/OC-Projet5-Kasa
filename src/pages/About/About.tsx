@@ -4,8 +4,13 @@ import Collapse from "../../components/Collapse/Collapse"
 import aboutList from "../../../data/aboutList.json"
 import "./About.scss"
 import vectorUp from '../../assets/Vector_up.svg'
+import vectorDown from "../../assets/Vector_down.svg"
+import { useState } from 'react';
+
 
 const About = () => {
+
+    const [openTitle, setOpenTitle]= useState<string | null>(null)
     return (
         <>
             <section>
@@ -18,7 +23,9 @@ const About = () => {
                     <Collapse
                         key={element.title}
                         title={element.title}
-                        icon={vectorUp}
+                        icon={openTitle === element.title ? vectorUp : vectorDown }
+                        isOpen={openTitle === element.title}
+                        onToggle={() => setOpenTitle(openTitle === element.title ? null : element.title)}
                     >
                         {element.content}
                     </Collapse>
