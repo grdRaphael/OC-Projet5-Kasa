@@ -1,7 +1,23 @@
+import paysage from '../../assets/paysage.webp'
+import Banner from '../../composants/Banner/Banner'
+
 const Home = () => {
-    return(
-        <h1>Chez vous, partout et ailleurs</h1>
+    return (
+        <>
+            <section>
+                <Banner image={paysage}
+                    alt="paysage"
+                    title='Chez vous, partout et ailleurs' />
+            </section>
+
+            <section>
+                
+            </section>
+        </>
+
+
+
     )
-} 
+}
 
 export default Home 
