@@ -10,7 +10,7 @@ const Banner = ({ image, title, alt }: BannerProps) => {
     return (
 
         <div className="banner_content">
-            <p className="banner_title">{title} </p>
+            <h1 className="banner_title">{title} </h1>
             <img src={image} alt={alt} className="banner_img"/>
         </div>
     )

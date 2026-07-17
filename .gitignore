@@ -25,3 +25,6 @@ dist-ssr
 
 # Notes perso (soutenance)
 journal-technique.md
+
+# Outillage perso Claude Code
+.claude/

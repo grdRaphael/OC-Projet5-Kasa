@@ -1,4 +1,8 @@
-.gallery{
+.gallery {
     background-color: rgba(246, 246, 246, 1);
     border-radius: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px 60px;
+    padding: 56px 50px 43px;
 }
