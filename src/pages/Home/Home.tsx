@@ -1,5 +1,6 @@
 import paysage from '../../assets/paysage.webp'
-import Banner from '../../composants/Banner/Banner'
+import Banner from '../../components/Banner/Banner'
+import "./Home.scss"
 
 const Home = () => {
     return (
@@ -10,8 +11,8 @@ const Home = () => {
                     title='Chez vous, partout et ailleurs' />
             </section>
 
-            <section>
-                
+            <section className='gallery'>
+
             </section>
         </>
 

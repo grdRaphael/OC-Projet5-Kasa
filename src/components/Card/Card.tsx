@@ -2,7 +2,10 @@ import "./Card.scss"
 
 const Card = () => {
 return(
-    <div></div>
+    <div className="card">  
+        
+
+    </div>
 )
 }
 
