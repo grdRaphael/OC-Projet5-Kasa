@@ -3,7 +3,7 @@ import paysage from "../../assets/paysage_2.webp"
 import Collapse from "../../components/Collapse/Collapse"
 import aboutList from "../../../data/aboutList.json"
 import "./About.scss"
-import icon from '../../assets/Vector_down.svg'
+import vectorUp from '../../assets/Vector_up.svg'
 
 const About = () => {
     return (
@@ -17,7 +17,7 @@ const About = () => {
                 {aboutList.map(element => (
                     <Collapse key={element.title}
                     title={element.title}
-                    icon={icon}
+                    icon={vectorUp}
                     
                     />
                 ))}
