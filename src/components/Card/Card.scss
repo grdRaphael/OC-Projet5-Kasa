@@ -7,6 +7,15 @@
     height: 340px;
     overflow: hidden;
     position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(transparent 0%,
+                transparent 42%,
+                rgba(0, 0, 0, 0.5) 100%);
+    }
 }
 
 .card_image {
@@ -18,7 +27,7 @@
 .card_title {
     font-size: 18px;
     font-weight: 700;
-    color: $text-color;
+    color: $text-color--light;
     position: absolute;
     left: 20px;
     bottom: 20px;
