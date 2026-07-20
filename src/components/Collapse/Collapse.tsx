@@ -6,7 +6,7 @@ type CollapseProps = {
     icon: string;
     children: React.ReactNode;
     isOpen: boolean;
-    onToggle : () => void
+    onToggle: () => void;
 }
 
 const Collapse = ({ title, icon, children, isOpen, onToggle }: CollapseProps) => {
