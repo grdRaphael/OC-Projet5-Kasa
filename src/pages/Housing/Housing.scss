@@ -1,0 +1,71 @@
+@use "../../styles/variables" as *;
+
+.housing_carousel{
+    height: 415px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.housing_image {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.housing_summary{
+    display: flex;
+    justify-content: space-between;
+}
+
+.housing_host{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.housing_host_name{
+    font-size: 18px;
+    font-weight: 500;
+    color: $primary-color;
+}
+
+.housing_host_avatar{
+    height: 64px;
+    width: 64px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.housing_host_picture{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.housing_tags{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 24px;
+    list-style: none;
+}
+
+.housing_tag{
+    background-color: $primary-color;
+    color: $text-color--light;
+    padding: 4px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.housing_collapses{
+    display: flex;
+    gap: 76px;
+
+    .collapse_wrapper{
+        flex: 1;
+    }
+}

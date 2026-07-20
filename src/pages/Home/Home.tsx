@@ -20,6 +20,7 @@ const Home = () => {
                     image={housing.pictures[0]} 
                     alt={housing.title} 
                     title={housing.title} 
+                    id={housing.id}
                     />
                 ))}
             </section>
