@@ -2,9 +2,16 @@
 
 .collapse{
     background-color: $primary-color;
+    border: none;
     border-radius: 5px;
-    padding: 10px 20px 10px 15px; 
-    display: flex;   
+    padding: 10px 24px 10px 15px;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     color: $text-color--light;
+    width: 100%;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
 }
+
