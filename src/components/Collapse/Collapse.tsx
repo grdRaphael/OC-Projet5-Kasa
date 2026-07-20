@@ -1,25 +1,25 @@
 import CollapsePanel from '../CollapsePanel/CollapsePanel';
 import './Collapse.scss'
+import vectorUp from '../../assets/Vector_up.svg'
+import vectorDown from "../../assets/Vector_down.svg"
+import { useState } from 'react';
 
 type CollapseProps = {
     title: string;
-    icon: string;
     children: React.ReactNode;
-    isOpen: boolean;
-    onToggle: () => void;
 }
 
-const Collapse = ({ title, icon, children, isOpen, onToggle }: CollapseProps) => {
+const Collapse = ({ title, children,  }: CollapseProps) => {
+    const [isOpen, setIsOpen]= useState(false)
 
     return (
         <div className='collapse_wrapper'>
             <div className="collapse"
-                onClick={onToggle}>
+                onClick={() => setIsOpen(!isOpen)}>
                 <h3 className='collapse_title'>{title}</h3>
-                <img src={icon} alt="icon" />
+                <img src={isOpen ? vectorUp : vectorDown } alt="icon" />
             </div>
             {isOpen && <CollapsePanel>{children}</CollapsePanel>}
-
         </div>
 
     )

@@ -3,14 +3,11 @@ import paysage from "../../assets/paysage_2.webp"
 import Collapse from "../../components/Collapse/Collapse"
 import aboutList from "../../../data/aboutList.json"
 import "./About.scss"
-import vectorUp from '../../assets/Vector_up.svg'
-import vectorDown from "../../assets/Vector_down.svg"
-import { useState } from 'react';
+
 
 
 const About = () => {
 
-    const [openTitle, setOpenTitle]= useState<string | null>(null)
     return (
         <>
             <section>
@@ -22,10 +19,7 @@ const About = () => {
                 {aboutList.map(element => (
                     <Collapse
                         key={element.title}
-                        title={element.title}
-                        icon={openTitle === element.title ? vectorUp : vectorDown }
-                        isOpen={openTitle === element.title}
-                        onToggle={() => setOpenTitle(openTitle === element.title ? null : element.title)}
+                        title={element.title}                        
                     >
                         {element.content}
                     </Collapse>
