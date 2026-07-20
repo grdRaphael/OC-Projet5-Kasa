@@ -4,6 +4,30 @@
     height: 415px;
     border-radius: 25px;
     overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+button:active{
+    transform: scale(.9);
+}
+
+.next_button{
+    position: absolute;
+    right: 23.36px;
+}
+
+.prev_button{
+    position: absolute;
+    left: 23.36px;
 }
 
 .housing_image {
@@ -69,3 +93,4 @@
         flex: 1;
     }
 }
+

@@ -2,6 +2,7 @@ import { Navigate, useParams } from "react-router-dom"
 import data from "../../../data/data.json"
 import Collapse from "../../components/Collapse/Collapse"
 import './Housing.scss'
+import SlideShow from "../../components/SlideShow/Slideshow"
 
 
 const Housing = () => {
@@ -23,9 +24,7 @@ const Housing = () => {
 
     return (
         <>
-            <div className="housing_carousel">
-                <img className="housing_image" src={housingDetail.pictures[0]} alt={housingDetail.title} />
-            </div>
+            <SlideShow pictures={housingDetail.pictures} alt={housingDetail.title} />
 
             <section className="housing_info">
 
