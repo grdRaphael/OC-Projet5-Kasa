@@ -14,7 +14,9 @@ return(
     <Link to={`/logement/${id}`} className="card">  
         <img className="card_image"
         src={image} 
-        alt={alt} />
+        alt={alt} 
+        loading="lazy"
+        decoding="async"/>
         <h2 className="card_title">{title}</h2>
     </Link>
 )
