@@ -22,17 +22,16 @@ const SlideShow = ({ pictures, alt, }: SlideShowProps) => {
 
     return (
         <div className="housing_carousel">
-            <button className="prev_button caroussel_buttons"
+            <button className="prev_button carousel_buttons"
                 onClick={() => setIndex(index ? index - 1 : pictures.length - 1)} >
                 <img src={prevButton} alt="bouton précédent" />
             </button>
-            <button className="next_button caroussel_buttons"
+            <button className="next_button carousel_buttons"
                 onClick={() => setIndex(pictures.length - 1 !== index ? index + 1 : 0)}>
                 <img src={nextButton} alt="bouton suivant" />
             </button>
             <img className="housing_image" src={pictures[index]} alt={alt} />
         </div>
-
     )
 }
 

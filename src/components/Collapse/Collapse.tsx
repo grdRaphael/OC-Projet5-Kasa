@@ -22,7 +22,7 @@ const Collapse = ({ title, children }: CollapseProps) => {
                     aria-expanded={isOpen}
                 >
                     <span className='collapse_title'>{title}</span>
-                    <img src={isOpen ? vectorUp : vectorDown } alt="" />
+                    <img src={isOpen ? vectorDown :  vectorUp} alt="" />
                 </button>
             </h3>
             {isOpen && <CollapsePanel>{children}</CollapsePanel>}
