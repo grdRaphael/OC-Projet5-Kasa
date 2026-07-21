@@ -10,7 +10,8 @@ const Home = () => {
             <section>
                 <Banner image={paysage}
                     alt="paysage"
-                    title='Chez vous, partout et ailleurs' />
+                    title='Chez vous, partout et ailleurs'
+                    hiddenTitle={false} />
             </section>
 
             <section className='gallery'>

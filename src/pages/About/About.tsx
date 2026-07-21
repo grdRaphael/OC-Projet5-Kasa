@@ -13,7 +13,8 @@ const About = () => {
             <section>
                 <Banner image={paysage}
                     alt='paysage'
-                    title="" />
+                    title="À propos"
+                    hiddenTitle={true} />
             </section>
             <section className="about_list">
                 {aboutList.map(element => (
