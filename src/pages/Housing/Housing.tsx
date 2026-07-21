@@ -3,10 +3,12 @@ import data from "../../../data/data.json"
 import Collapse from "../../components/Collapse/Collapse"
 import './Housing.scss'
 import SlideShow from "../../components/SlideShow/Slideshow"
+import type { Lodging } from "../../types/lodging"
+
 
 
 const Housing = () => {
-    const getHousingById = (id: string | undefined) => {
+    const getHousingById = (id: string | undefined): Lodging | undefined => {
         return data.find(element => element.id === id)
     }
 
