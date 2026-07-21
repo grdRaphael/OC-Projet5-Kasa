@@ -17,7 +17,7 @@ const Collapse = ({ title, children }: CollapseProps) => {
             <h3 className='collapse_heading'>
                 <button
                     type="button"
-                    className="collapse"
+                    className="collapse_button"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-expanded={isOpen}
                 >
