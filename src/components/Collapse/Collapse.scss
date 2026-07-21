@@ -3,7 +3,7 @@
 .collapse_button{
     background-color: $primary-color;
     border: none;
-    border-radius: 5px;
+    border-radius: $border-radius--xs;
     padding: 10px 24px 10px 15px;
     display: flex;
     align-items: center;

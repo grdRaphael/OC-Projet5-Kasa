@@ -39,7 +39,7 @@
 }
 
 .housing_host_picture{
-    @include cover-image
+    @include cover-image;
 }
 
 .housing_tags{
@@ -58,7 +58,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: $border-radius;
 }
 
 .housing_collapses{

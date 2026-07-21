@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+
 .banner_content {
     border-radius: 25px;
     overflow: hidden;
@@ -9,7 +11,7 @@
 
     &::after {
         content: '';
-        background-color: black;
+        background-color: $dark;
         opacity: 60%;
         position: absolute;
         inset: 0;
@@ -25,7 +27,7 @@
 .banner_title {
     font-size: 48px;
     font-weight: 700;
-    color: white;
+    color: $text-color--light;
     background-color: transparent;
     position: absolute;
     z-index: 1;

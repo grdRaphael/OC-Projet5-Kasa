@@ -3,8 +3,7 @@
 
 
 .card {
-    border-radius: 10px;
-    overflow: hidden;
+    border-radius: $border-radius;
     max-width: 340px;
     height: 340px;
     overflow: hidden;
@@ -19,14 +18,14 @@
                 transparent 42%,
                 rgba(0, 0, 0, 0.5) 100%);
     }
-}
 
-.card:hover{
-    transform: translateY(-6px);
+    &:hover{
+        transform: translateY(-6px);
+    }
 }
 
 .card_image {
-    @include cover-image
+    @include cover-image;
 }
 
 .card_title {

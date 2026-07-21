@@ -1,7 +1,8 @@
+@use '../../styles/variables' as *;
+
 .collapse_panel{
-    background-color:rgba(246, 246, 246, 0.45);
+    background-color: rgba($secondary-bg, 0.45);
     padding: 20px 50px;
-    border-bottom-left-radius: 5px ;
-    border-bottom-right-radius: 5px;
-    
+    border-bottom-left-radius: $border-radius--xs;
+    border-bottom-right-radius: $border-radius--xs;
 }

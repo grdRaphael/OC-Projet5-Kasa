@@ -1,5 +1,7 @@
+@use '../../styles/variables' as *;
+
 .gallery {
-    background-color: rgba(246, 246, 246, 1);
+    background-color: $secondary-bg;
     border-radius: 24px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

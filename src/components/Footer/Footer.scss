@@ -1,5 +1,7 @@
+@use '../../styles/variables' as *;
+
 footer {
-    background-color: black;
+    background-color: $dark;
     width: 100%;
     height: 209px;
 }
@@ -20,7 +22,7 @@ footer {
 }
 
 .footer_copyright {
-    color: white;
+    color: $text-color--light;
     font-size: 24px;
     font-weight: 500;
 }
