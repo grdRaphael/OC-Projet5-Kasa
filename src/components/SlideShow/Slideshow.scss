@@ -1,0 +1,20 @@
+.carousel_buttons{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.carousel_buttons:active{
+    transform: scale(.9);
+}
+
+.next_button{
+    position: absolute;
+    right: 23.36px;
+}
+
+.prev_button{
+    position: absolute;
+    left: 23.36px;
+}
