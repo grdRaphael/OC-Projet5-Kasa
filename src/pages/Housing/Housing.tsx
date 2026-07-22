@@ -4,6 +4,8 @@ import Collapse from "../../components/Collapse/Collapse"
 import './Housing.scss'
 import SlideShow from "../../components/SlideShow/Slideshow"
 import type { Lodging } from "../../types/lodging"
+import starEmpty from '../../assets/starEmpty.svg'
+import starFilled from '../../assets/starFilled.svg'
 
 
 
@@ -14,7 +16,6 @@ const Housing = () => {
 
     const { id } = useParams()
 
-
     const housingDetail = getHousingById(id)
 
 
@@ -22,6 +23,12 @@ const Housing = () => {
         return (<Navigate to="/route-inexistante" replace />
         )
     }
+
+
+    const rating = Number(housingDetail.rating)
+
+
+    const [firstName, ...rest] = housingDetail.host.name.split(" ")
 
 
     return (
@@ -37,12 +44,26 @@ const Housing = () => {
                     </div>
 
                     <div className="housing_host">
-                        <p className="housing_host_name">{housingDetail.host.name}</p>
+                        <p className="housing_host_name">
+                            <span>{firstName}</span>
+                            <span>{rest.join(" ")}</span>
+                        </p>
                         <div className="housing_host_avatar">
                             <img className="housing_host_picture"
                                 src={housingDetail.host.picture}
                                 alt={housingDetail.host.name}
                             />
+                        </div>
+
+                        <div className="housing_host_rating">
+                            <p className="sr_only">Note de {housingDetail.rating} sur 5</p>
+                            {[1, 2, 3, 4, 5].map((n: number) => (
+                                <img
+                                    key={n}
+                                    src={n <= rating ? starFilled : starEmpty}
+                                    alt=""
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
