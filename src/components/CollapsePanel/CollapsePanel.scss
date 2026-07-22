@@ -1,8 +1,26 @@
 @use '../../styles/variables' as *;
 
-.collapse_panel{
+.collapse_panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .3s ease;
+}
+
+
+.collapse_panel--open {
+    grid-template-rows: 1fr;
+}
+
+.collapse_panel_content{
+    overflow: hidden;
+    min-height: 0;
+    
+}
+
+.collapse_panel_inner{
+    padding: 16px 20px;
     background-color: rgba($secondary-bg, 0.45);
-    padding: 20px 50px;
     border-bottom-left-radius: $border-radius--xs;
     border-bottom-right-radius: $border-radius--xs;
+    line-height: 143%;
 }

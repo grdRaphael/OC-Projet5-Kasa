@@ -10,7 +10,7 @@ type CollapseProps = {
 }
 
 const Collapse = ({ title, children }: CollapseProps) => {
-    const [isOpen, setIsOpen]= useState(false)
+    const [isOpen, setIsOpen] = useState(false)
 
     return (
         <div className='collapse_wrapper'>
@@ -22,10 +22,12 @@ const Collapse = ({ title, children }: CollapseProps) => {
                     aria-expanded={isOpen}
                 >
                     <span className='collapse_title'>{title}</span>
-                    <img src={isOpen ? vectorDown :  vectorUp} alt="" />
+                    <img src={isOpen ? vectorDown : vectorUp} alt="" />
                 </button>
             </h3>
-            {isOpen && <CollapsePanel>{children}</CollapsePanel>}
+
+            <CollapsePanel isOpen={isOpen}>{children}</CollapsePanel>
+
         </div>
 
     )
