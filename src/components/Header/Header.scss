@@ -1,17 +1,36 @@
-header{
+@use '../../styles/mixins' as *;
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 45px 100px 0;
+
+    @include mobile {
+        padding: 20px;
+    }
 }
 
-.header_nav{
+.header_nav {
     display: flex;
     gap: 57px;
     font-size: 24px;
     font-weight: 500;
+
+    @include mobile {
+        font-size: 12px;
+        text-transform: uppercase;
+        gap: 26px;
+    }
 }
 
-.nav_link.active{
+.nav_link.active {
     text-decoration: underline;
+}
+
+.header_logo {
+    @include mobile {
+        width: 145px;
+        height: 46.88px;
+    }
 }

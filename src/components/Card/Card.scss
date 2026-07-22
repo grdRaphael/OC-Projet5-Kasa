@@ -4,7 +4,6 @@
 
 .card {
     border-radius: $border-radius;
-    max-width: 340px;
     height: 340px;
     overflow: hidden;
     position: relative;
@@ -21,6 +20,10 @@
 
     &:hover{
         transform: translateY(-6px);
+    }
+
+    @include mobile {
+        height: 255px;
     }
 }
 

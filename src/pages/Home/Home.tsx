@@ -15,16 +15,18 @@ const Home = () => {
                     hiddenTitle={false} />
             </section>
 
-            <section className='gallery'>
-                {data.map((housing: Lodging) => (
-                    <Card
-                    key={housing.id}
-                    image={housing.pictures[0]} 
-                    alt={housing.title} 
-                    title={housing.title} 
-                    id={housing.id}
-                    />
-                ))}
+            <section>
+                <div className='gallery'>
+                    {data.map((housing: Lodging) => (
+                        <Card
+                            key={housing.id}
+                            image={housing.pictures[0]}
+                            alt={housing.title}
+                            title={housing.title}
+                            id={housing.id}
+                        />
+                    ))}
+                </div>
             </section>
         </>
 

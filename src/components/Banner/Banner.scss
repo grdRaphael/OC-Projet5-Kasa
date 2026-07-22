@@ -1,4 +1,5 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 
 .banner_content {
     border-radius: 25px;
@@ -22,6 +23,10 @@
     height: 223px;
     width: 100%;
     object-fit: cover;
+
+    @include mobile {
+        height: 111px;
+    }
 }
 
 .banner_title {
@@ -31,4 +36,8 @@
     background-color: transparent;
     position: absolute;
     z-index: 1;
+
+    @include mobile{
+        font-size: 24px;
+    }
 }

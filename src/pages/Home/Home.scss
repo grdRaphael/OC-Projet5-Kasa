@@ -1,4 +1,8 @@
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+
+
 
 .gallery {
     background-color: $secondary-bg;
@@ -7,4 +11,12 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px 60px;
     padding: 56px 50px 43px;
+
+    @include mobile{
+        background-color: $background-color;
+        padding: 0px 0px 27px;
+        gap: 22px;
+        grid-template-columns: 1fr;
+    }
 }
+
