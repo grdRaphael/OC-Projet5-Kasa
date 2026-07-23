@@ -1,4 +1,4 @@
-import { Navigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import data from "../../../data/data.json"
 import Collapse from "../../components/Collapse/Collapse"
 import './Housing.scss'
@@ -6,6 +6,7 @@ import SlideShow from "../../components/SlideShow/Slideshow"
 import type { Lodging } from "../../types/lodging"
 import starEmpty from '../../assets/starEmpty.svg'
 import starFilled from '../../assets/starFilled.svg'
+import Error from "../Error/Error"
 
 
 
@@ -20,8 +21,7 @@ const Housing = () => {
 
 
     if (!housingDetail) {
-        return (<Navigate to="/route-inexistante" replace />
-        )
+        return (<Error/>)
     }
 
 
