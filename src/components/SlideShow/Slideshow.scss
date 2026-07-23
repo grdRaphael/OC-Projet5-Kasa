@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as *; 
+
 .carousel_buttons{
     border: none;
     background-color: transparent;
@@ -12,9 +14,24 @@
 .next_button{
     position: absolute;
     right: 23.36px;
+
+    @include mobile {
+        right: 5.84px;
+    }
 }
 
 .prev_button{
     position: absolute;
     left: 23.36px;
+
+     @include mobile {
+        left: 5.84px;
+    }
+}
+
+.carousel_buttons img{
+     @include mobile {
+        width: 11.67px;
+        height: 19.8px;
+    }
 }

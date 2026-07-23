@@ -3,6 +3,7 @@ import nextButton from "../../assets/nextButton.svg"
 import prevButton from "../../assets/prevButton.svg"
 import './Slideshow.scss'
 
+
 type SlideShowProps = {
     pictures: string[];
     alt: string

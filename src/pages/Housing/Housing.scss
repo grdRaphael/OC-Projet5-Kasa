@@ -1,79 +1,114 @@
 @use "../../styles/variables" as *;
 @use '../../styles/mixins' as *;
 
-.housing_carousel{
+.housing_carousel {
     height: 415px;
     border-radius: 25px;
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
+
+    @include mobile {
+        height: 255px;
+        border-radius: 10px;
+    }
 }
 
 .housing_image {
     @include cover-image
 }
 
-.housing_summary{
+.housing_summary {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+        flex-direction: column;
+    }
 }
 
-.housing_title{
+.housing_title {
     font-size: 36px;
     font-weight: 500;
     color: $primary-color;
     line-height: 143%;
+
+    @include mobile {
+        font-size: 18px;
+    }
 }
 
-.housing_location{
+.housing_location {
     line-height: 143%;
+
+    @include mobile {
+        font-size: 14px;
+    }
 }
 
-.housing_host{
+.housing_host {
     display: flex;
     align-items: center;
     gap: 10px;
-    position :relative;
+    position: relative;
+
+    @include mobile {
+        justify-content: right;
+        margin-top: 16px;
+    }
 }
 
-.housing_host_name{
+.housing_host_name {
     font-size: 18px;
     font-weight: 500;
     color: $primary-color;
     display: flex;
     flex-direction: column;
     align-items: end;
+
+    @include mobile {
+        font-size: 12px;
+    }
 }
 
-.housing_host_avatar{
+.housing_host_avatar {
     height: 64px;
     width: 64px;
-    border-radius: 100px;
+    border-radius: 50%;
     overflow: hidden;
+
+    @include mobile {
+        height: 32px;
+        width: 32px;
+    }
 }
 
-.housing_host_rating{
+.housing_host_rating {
     position: absolute;
     top: 85px;
     right: 0;
     display: flex;
     gap: 6.5px;
-    
+
+    @include mobile{
+        top: 0px; 
+        left: 0
+    }
 }
 
-.housing_host_picture{
+.housing_host_picture {
     @include cover-image;
 }
 
-.housing_tags{
+.housing_tags {
     display: flex;
     gap: 10px;
     margin: 20px 0 24px;
     list-style: none;
 }
 
-.housing_tag{
+.housing_tag {
     background-color: $primary-color;
     color: $text-color--light;
     padding: 4px 20px;
@@ -83,19 +118,28 @@
     justify-content: center;
     align-items: center;
     border-radius: $border-radius;
-}
 
-.housing_collapses{
-    display: flex;
-    gap: 76px;
-
-    .collapse_wrapper{
-        flex: 1;
+    @include mobile {
+        font-size: 10px;
+        
     }
 }
 
-.housing_equipments{
-    list-style: none;
-    
+.housing_collapses {
+    display: flex;
+    gap: 76px;
+
+    .collapse_wrapper {
+        flex: 1;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
+.housing_equipments {
+    list-style: none;
+
+}
