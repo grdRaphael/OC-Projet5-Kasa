@@ -44,6 +44,7 @@ const SlideShow = ({ pictures, alt, }: SlideShowProps) => {
                 <img src={nextButton} alt="bouton suivant" decoding="async"/>
             </button>
             <img className="housing_image" src={pictures[index]} alt={alt} />
+            <span className="carousel_counter">{index + 1}/{pictures.length}</span>
         </div>
     )
 }

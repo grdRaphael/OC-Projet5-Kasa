@@ -1,4 +1,5 @@
 @use "../../styles/mixins" as *; 
+@use "../../styles/variables" as *; 
 
 .carousel_buttons{
     border: none;
@@ -34,4 +35,15 @@
         width: 11.67px;
         height: 19.8px;
     }
+}
+
+.carousel_counter{
+    position: absolute;
+    bottom: 24.92px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 143%;
+    color: $text-color--light;
 }
