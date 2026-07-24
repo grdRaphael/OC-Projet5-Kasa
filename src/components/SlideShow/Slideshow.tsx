@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import nextButton from "../../assets/nextButton.svg"
 import prevButton from "../../assets/prevButton.svg"
 import './Slideshow.scss'
@@ -13,7 +13,7 @@ const SlideShow = ({ pictures, alt, }: SlideShowProps) => {
 
     const [index, setIndex] = useState(0)
 
-    useEffect(() => {
+    /*useEffect(() => {
         const nextIndex = pictures.length - 1 !== index ? index + 1 : 0;
         const prevIndex = index ? index - 1 : pictures.length - 1;
 
@@ -23,7 +23,7 @@ const SlideShow = ({ pictures, alt, }: SlideShowProps) => {
         const prevImg = new Image()
         prevImg.src = pictures[prevIndex]
 
-    }, [index, pictures])
+    }, [index, pictures])*/
 
     if (pictures.length === 1) {
         return (

@@ -11,25 +11,23 @@ import Error from "../Error/Error"
 
 
 const Housing = () => {
+
+    const { id } = useParams()
+
     const getHousingById = (id: string | undefined): Lodging | undefined => {
         return data.find(element => element.id === id)
     }
-
-    const { id } = useParams()
 
     const housingDetail = getHousingById(id)
 
 
     if (!housingDetail) {
-        return (<Error/>)
+        return (<Error />)
     }
-
 
     const rating = Number(housingDetail.rating)
 
-
     const [firstName, ...rest] = housingDetail.host.name.split(" ")
-
 
     return (
         <>

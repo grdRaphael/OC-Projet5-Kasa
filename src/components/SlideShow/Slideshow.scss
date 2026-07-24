@@ -46,4 +46,8 @@
     font-weight: 500;
     line-height: 143%;
     color: $text-color--light;
+
+    @include mobile {
+        display: none;
+    }
 }
