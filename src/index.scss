@@ -26,10 +26,20 @@ main{
     padding: 45px 100px;
     display: flex;
     flex-direction: column;
-    gap: 43px;
+    gap: 24px;
 
     @include mobile{
         padding: 0 20px 20px;
-        gap: 22px;
+        gap: 24px;
     }
+}
+
+.sr_only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+    clip-path: inset(50%);
 }
