@@ -40,37 +40,38 @@ const Housing = () => {
                         <h1 className="housing_title">{housingDetail.title}</h1>
                         <p className="housing_location">{housingDetail.location}</p>
                     </div>
-
-                    <div className="housing_host">
-                        <p className="housing_host_name">
-                            <span>{firstName}</span>
-                            <span>{rest.join(" ")}</span>
-                        </p>
-                        <div className="housing_host_avatar">
-                            <img className="housing_host_picture"
-                                src={housingDetail.host.picture}
-                                alt={housingDetail.host.name}
-                            />
-                        </div>
-
-                        <div className="housing_host_rating">
-                            <p className="sr_only">Note de {housingDetail.rating} sur 5</p>
-                            {[1, 2, 3, 4, 5].map((n: number) => (
-                                <img
-                                    key={n}
-                                    src={n <= rating ? starFilled : starEmpty}
-                                    alt=""
-                                />
-                            ))}
-                        </div>
-                    </div>
                 </div>
-
                 <ul className="housing_tags">
                     {housingDetail.tags.map(tag => (
                         <li key={tag} className="housing_tag">{tag}</li>
                     ))}
                 </ul>
+
+                <div className="housing_host">
+                    <p className="housing_host_name">
+                        <span>{firstName}</span>
+                        <span>{rest.join(" ")}</span>
+                    </p>
+                    <div className="housing_host_avatar">
+                        <img className="housing_host_picture"
+                            src={housingDetail.host.picture}
+                            alt={housingDetail.host.name}
+                        />
+                    </div>
+                    <div className="housing_host_rating">
+                        <p className="sr_only">Note de {housingDetail.rating} sur 5</p>
+                        {[1, 2, 3, 4, 5].map((n: number) => (
+                            <img
+                                key={n}
+                                src={n <= rating ? starFilled : starEmpty}
+                                alt=""
+                            />
+                        ))}
+                    </div>
+                </div>
+
+
+
 
                 <div className="housing_collapses">
                     <Collapse title="Description">

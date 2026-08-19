@@ -1,6 +1,10 @@
 @use "../../styles/variables" as *;
 @use '../../styles/mixins' as *;
 
+.housing_info{
+    position: relative;
+}
+
 .housing_carousel {
     height: 415px;
     border-radius: 25px;
@@ -22,9 +26,13 @@
 .housing_summary {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding-right: 200px;
 
     @include mobile {
         flex-direction: column;
+        padding: 0;
     }
 }
 
@@ -51,11 +59,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
 
     @include mobile {
-        justify-content: right;
-        margin-top: 16px;
+        position: static;
+        width: 100%;
+        margin-bottom: 13px;
     }
 }
 
@@ -86,14 +97,25 @@
 
 .housing_host_rating {
     position: absolute;
-    top: 85px;
-    right: 0;
+    top: 91px;
+    right: 0px;
     display: flex;
     gap: 6.5px;
 
     @include mobile{
-        top: 0px; 
-        left: 0
+        position: static;
+        order: -1;
+        margin-right: auto;
+    }
+}
+
+.housing_host_rating img {
+    width: 25px;
+    height: 24px;
+
+    @include mobile {
+        width: 13.41px; 
+        height: 13px;
     }
 }
 
@@ -106,6 +128,10 @@
     gap: 10px;
     margin: 20px 0 24px;
     list-style: none;
+    
+    @include mobile {
+        margin: 10px 0 11px;
+    }
 }
 
 .housing_tag {
