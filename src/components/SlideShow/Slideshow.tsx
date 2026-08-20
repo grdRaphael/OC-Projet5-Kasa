@@ -9,21 +9,9 @@ type SlideShowProps = {
     alt: string
 }
 
-const SlideShow = ({ pictures, alt, }: SlideShowProps) => {
+const SlideShow = ({ pictures, alt }: SlideShowProps) => {
 
     const [index, setIndex] = useState(0)
-
-    /*useEffect(() => {
-        const nextIndex = pictures.length - 1 !== index ? index + 1 : 0;
-        const prevIndex = index ? index - 1 : pictures.length - 1;
-
-        const nextImg = new Image()
-        nextImg.src = pictures[nextIndex]
-
-        const prevImg = new Image()
-        prevImg.src = pictures[prevIndex]
-
-    }, [index, pictures])*/
 
     if (pictures.length === 1) {
         return (

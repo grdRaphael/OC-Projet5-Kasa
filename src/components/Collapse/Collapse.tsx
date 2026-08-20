@@ -8,8 +8,7 @@ type CollapseProps = {
     title: string;
     children: React.ReactNode;
 }
-
-const Collapse = ({ title, children}: CollapseProps) => {
+const Collapse = ({ title, children }: CollapseProps) => {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
@@ -22,7 +21,7 @@ const Collapse = ({ title, children}: CollapseProps) => {
                     aria-expanded={isOpen}
                 >
                     <span className='collapse_title'>{title}</span>
-                    <img src={isOpen ? vectorDown : vectorUp} alt=""/>
+                    <img src={isOpen ? vectorDown : vectorUp} alt="" />
                 </button>
             </h3>
             <CollapsePanel isOpen={isOpen}>{children}</CollapsePanel>
