@@ -48,6 +48,16 @@ const Housing = () => {
                 </ul>
 
                 <div className="housing_host">
+                     <div className="housing_host_rating">
+                        <p className="sr_only">Note de {housingDetail.rating} sur 5</p>
+                        {[1, 2, 3, 4, 5].map((n: number) => (
+                            <img
+                                key={n}
+                                src={n <= rating ? starFilled : starEmpty}
+                                alt=""
+                            />
+                        ))}
+                    </div>
                     <p className="housing_host_name">
                         <span>{firstName}</span>
                         <span>{rest.join(" ")}</span>
@@ -58,20 +68,7 @@ const Housing = () => {
                             alt={housingDetail.host.name}
                         />
                     </div>
-                    <div className="housing_host_rating">
-                        <p className="sr_only">Note de {housingDetail.rating} sur 5</p>
-                        {[1, 2, 3, 4, 5].map((n: number) => (
-                            <img
-                                key={n}
-                                src={n <= rating ? starFilled : starEmpty}
-                                alt=""
-                            />
-                        ))}
-                    </div>
                 </div>
-
-
-
 
                 <div className="housing_collapses">
                     <Collapse title="Description">
